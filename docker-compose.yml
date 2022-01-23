@@ -53,6 +53,8 @@ services:
     depends_on:
       - db
       - broker
+    networks:
+      - frontback
 
   frontend:
     build: ./front
@@ -62,3 +64,10 @@ services:
       - 8082:8082
     depends_on:
       - consumer
+    networks:
+      - frontback
+    
+    
+networks:
+  frontback:
+    driver: bridge
