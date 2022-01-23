@@ -1,0 +1,16 @@
+{
+  "name": "sistemasdistribuidos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "csvtojson": "^2.0.10",
+    "kafka-node": "^5.0.0"
+  }
+}
