@@ -54,11 +54,11 @@ services:
       - db
       - broker
 
-  #frontend:
-  #  build: ./front
-  #  image: kafka/front
-  #  container_name: kafka-frontend
-  #  ports:
-  #    - 8082:8082
-  #  depends_on:
-  #    - consumer
+  frontend:
+    build: ./front
+    image: kafka/front
+    container_name: kafka-frontend
+    ports:
+      - 8082:8082
+    depends_on:
+      - consumer
