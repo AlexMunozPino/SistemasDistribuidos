@@ -194,7 +194,7 @@
     }),
     methods:{
       getToday() {
-        axios.get("http://localhost:8081/earthquakes/today").
+        axios.get("http://kafka-java-consumer:8081/earthquakes/today").
         then(response => {
           let data = JSON.parse(JSON.stringify(response.data))
           this.terremotos24 = this.transformTimestampToDate(data)
@@ -204,7 +204,7 @@
       },
 
       getBetweenDates() {
-        axios.get("http://localhost:8081/earthquakes/"+this.date1+"/"+this.date2)
+        axios.get("http://kafka-java-consumer:8081/earthquakes/"+this.date1+"/"+this.date2)
         .then(response => {
           let data = JSON.parse(JSON.stringify(response.data))
           this.terremotos = this.transformTimestampToDate(data)
